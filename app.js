@@ -6,4 +6,10 @@ app.get("/", (req, res) => {
 	res.send("Hello, man");
 });
 
+app.get("/demo", (req, res) => {
+	res.set("X-headercan", "test");
+	res.status(418);
+	res.send("Status 418");
+});
+
 app.listen(port, () => console.log(`App is listening on port ${port}`));
